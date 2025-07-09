@@ -7,7 +7,7 @@ def round_price_to_millions(price, base=5_000_000):
     return int(np.round(price / base) * base)
 
 # --- Load database kecamatan ---
-df_kec = pd.read_csv("data/database_kecamatan.csv")
+df_kec = pd.read_csv("database_kecamatan.csv")
 df_kec.columns = df_kec.columns.str.strip()  # jaga-jaga kolom ada spasi
 
 # --- Konfigurasi tampilan ---

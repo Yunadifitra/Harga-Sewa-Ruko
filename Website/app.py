@@ -2,12 +2,13 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import joblib
+from data_kecamatan import load_kecamatan_data
 
 def round_price_to_millions(price, base=5_000_000):
     return int(np.round(price / base) * base)
 
 # --- Load database kecamatan ---
-df_kec = pd.read_csv("database_kecamatan.csv")
+df_kec = load_kecamatan_data()
 df_kec.columns = df_kec.columns.str.strip()  # jaga-jaga kolom ada spasi
 
 # --- Konfigurasi tampilan ---

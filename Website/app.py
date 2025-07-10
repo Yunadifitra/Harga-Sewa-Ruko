@@ -47,7 +47,7 @@ model_choice = "random_forest" if kota.lower() in ["jakarta", "surabaya"] else "
 if st.button("🔍 Prediksi Harga Sewa"):
     try:
         # Load model
-        model_path = f"models/{model_choice}_{kota.lower()}.pkl"
+        model_path = "surabaya.pkl"
         model = joblib.load(model_path)
 
         # Buat dataframe input
